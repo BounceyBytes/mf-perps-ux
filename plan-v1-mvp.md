@@ -46,7 +46,7 @@ Screen 1: Sign Up
 │  │ Continue with Google│ │
 │  └───────────────────┘  │
 │  ┌───────────────────┐  │
-│  │ Use email/phone    │  │
+│  │ Use email    │  │
 │  └───────────────────┘  │
 │                         │
 │  Already have account?  │
@@ -146,6 +146,8 @@ Deposit Screen
 - User enters a dollar amount. We handle the fiat→stablecoin conversion behind the scenes (we support mantraUSD, USDC, and USDT — mantraUSD is our default stablecoin). They never see "USDC", "bridging", or "network fees".
 - For the crypto transfer path, show a simple "receive" screen with address + QR — auto-detect the network. No chain picker dropdown.
 
+// TODO: Update to QR code + wallet address with chain instructions. 
+
 **Amount entry:**
 ```
 ┌─────────────────────────┐
@@ -171,7 +173,7 @@ Deposit Screen
 │   └───────────────────┘ │
 │                         │
 │   Fee: $1.50            │
-│   Buying power $148.50 │
+│   Deposited: $148.50 │
 └─────────────────────────┘
 ```
 
@@ -189,11 +191,13 @@ Dumps users into a market list. No guidance on what to trade or why.
 #### MF Perps Approach: "The Feed"
 
 The home screen isn't a market list. It's a **trading feed** — part watchlist, part discovery.
+// TODO: Add scroll to see more pairs in the market on the home screen
+// TODO: Add points, the bottom nav should probably be ['Home', 'Portfolio', 'Points', 'Account']
 
 ```
 Home Screen
 ┌─────────────────────────┐
-│ ☰  MF Perps     $148.50│
+│ My Funds     $148.50    │
 │                         │
 │ 🔥 Trending             │
 │ PEPE  +47.2%  24h       │
@@ -211,7 +215,7 @@ Home Screen
 │ │+23.1%││-8.4% ││+5.6%││
 │ └──────┘└──────┘└─────┘│
 │                         │
-│ [Home] [Trade] [Portfolio]│
+│ [Home] [Portfolio] [Points] [Account]│
 └─────────────────────────┘
 ```
 
@@ -231,6 +235,8 @@ Home Screen
 Too many steps. Market selection → chart → amount → leverage picker → review → confirmation → sign transaction → wait for blockchain. That's 7-8 screens with multiple cognitive loads (understanding leverage, reading confirmations, signing transactions).
 
 #### MF Perps Approach: "Trade in 2 taps"
+// TODO: launched from tapping any of the markets
+// TODO: change the amount buttons from absolute to %'s
 
 ```
 Trade Screen (e.g. BTC)
@@ -289,7 +295,9 @@ Trade Screen (e.g. BTC)
 
 7. **No transaction signing.** No MetaMask popup, no "confirm transaction", no gas estimation. **Privy embedded wallet + session keys** handle signing silently. The trade executes instantly with an optimistic UI update.
 
-8. **Instant feedback.**
+// TODO: Add back the share button w/ a hook of 'trade w/ me' + referral code
+
+9. **Instant feedback.**
    ```
    ┌─────────────────────────┐
    │                         │
@@ -385,6 +393,9 @@ Portfolio Screen
 Requires navigating into position detail, finding the close button, confirming, signing a transaction, waiting.
 
 #### MF Perps Approach: "Swipe to close"
+// TODO: Change 'close partial' to 'modify' and make sure that the user can increase/decrease position size && modify the TP/SL
+// TODO: Change 'close full' to 'cash out'
+// TODO: Consider having a chart
 
 - Tap "Close" on any position card
 - Bottom sheet slides up:
@@ -412,6 +423,10 @@ Requires navigating into position detail, finding the close button, confirming, 
 ### 7. Withdrawals
 
 #### MF Perps Approach: "Get your money out, fast"
+// TODO: Only do the export from the HL vault -> privy
+// TODO: Defer most of this work to post RWA sleep feature bc that might make this significantly easier.
+// TODO: Need to add export private key
+// TODO: Language support, need to decide on which languages in which version. 
 
 ```
 Withdraw Screen
@@ -443,6 +458,7 @@ Withdraw Screen
 ---
 
 ## Navigation Structure
+// TODO: Update to match the new nav above
 
 ```
 ┌─────────────────────────────────┐
