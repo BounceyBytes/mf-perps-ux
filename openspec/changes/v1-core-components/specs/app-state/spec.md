@@ -1,7 +1,7 @@
 ## ADDED Requirements
 
 ### Requirement: Store manages screen navigation
-The Zustand store SHALL expose a `screen` state (union of all screen names: 'welcome', 'kyc', 'referral', 'youre-in', 'home', 'deposit', 'deposit-amount', 'trade', 'portfolio', 'withdraw') defaulting to 'welcome', and a `navigate(screen)` function to change it.
+The Zustand store SHALL expose a `screen` state (union of all screen names: 'welcome', 'kyc', 'youre-in', 'home', 'deposit', 'deposit-amount', 'trade', 'portfolio', 'withdraw') defaulting to 'welcome', and a `navigate(screen)` function to change it. The 'referral' screen is deferred to V3 — see [plan-v3-referral-program.md](../../plan-v3-referral-program.md).
 
 #### Scenario: Navigate from welcome to kyc
 - **WHEN** `navigate('kyc')` is called

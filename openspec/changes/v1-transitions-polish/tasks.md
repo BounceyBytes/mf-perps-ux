@@ -5,7 +5,7 @@
 
 ## 2. Screen Transitions
 
-- [ ] 2.1 Define transition variant maps in `page.tsx` — onboarding screens (welcome, kyc, referral, youre-in) get slide-right (x:30→0, exit x:-30, 300ms), tab screens (home, trade, portfolio) get crossfade (opacity, 200ms), modal screens (deposit, deposit-amount, withdraw) get slide-up (y:50→0, 300ms)
+- [ ] 2.1 Define transition variant maps in `page.tsx` — onboarding screens (welcome, kyc, youre-in) get slide-right (x:30→0, exit x:-30, 300ms), tab screens (home, trade, portfolio) get crossfade (opacity, 200ms), modal screens (deposit, deposit-amount, withdraw) get slide-up (y:50→0, 300ms)
 - [ ] 2.2 Wrap screen router content in AnimatePresence mode="wait" with motion.div keyed by store.screen, applying the correct variant based on screen category
 - [ ] 2.3 Render Toast component inside PhoneFrame (after screen content, before overlay layer) so toasts appear on all screens
 

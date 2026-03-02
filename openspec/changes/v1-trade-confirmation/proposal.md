@@ -28,3 +28,4 @@ After a user taps the CTA on the Trade screen, there is no feedback confirming t
 - Depends on: PhoneFrame, Button, Card, Zustand store (from core-components change)
 - Depends on: TradeScreen triggering `showOverlay('trade-confirmation')` (from trade-screen change)
 - Reads trade parameters (pair, direction, amount, leverage, entry price) from store or props
+- **Share card integration**: When this is the user's first position, the confirmation sheet includes a "Share Your Win 🎉" button that triggers the share-card overlay to celebrate the milestone

@@ -106,3 +106,18 @@ The TradeConfirmation component SHALL only render when `store.overlay === 'trade
 #### Scenario: Overlay does not render otherwise
 - **WHEN** `store.overlay` is `null`
 - **THEN** the TradeConfirmation component is not in the DOM
+
+### Requirement: Share card trigger on first position
+When this is the user's first opened position (e.g., `store.openPositions` was empty before this trade), the TradeConfirmation bottom sheet SHALL render an additional "Share Your Win 🎉" secondary button below "Set TP/SL". Tapping it SHALL dismiss the trade confirmation overlay and, after a short delay (~500ms), trigger `store.showOverlay('share-card')`.
+
+#### Scenario: First position shows share button
+- **WHEN** the trade confirmation appears and this is the user's first position
+- **THEN** a "Share Your Win 🎉" secondary button appears below "Set TP/SL"
+
+#### Scenario: User taps Share Your Win
+- **WHEN** the user taps "Share Your Win 🎉"
+- **THEN** the trade confirmation overlay dismisses and the share-card overlay appears after ~500ms
+
+#### Scenario: Not first position hides share button
+- **WHEN** the trade confirmation appears and the user already had open positions
+- **THEN** the "Share Your Win 🎉" button is not rendered

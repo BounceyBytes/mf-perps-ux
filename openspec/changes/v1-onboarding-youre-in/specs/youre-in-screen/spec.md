@@ -8,17 +8,17 @@ The YoureInScreen SHALL display a CheckCircle2 icon (from Lucide) in accent colo
 - **THEN** a 64px CheckCircle2 icon in accent color is displayed centered, followed by "You're all set" heading in text-2xl font-bold
 
 ### Requirement: Two action buttons are displayed
-The YoureInScreen SHALL render two full-width buttons with mt-8 and gap-3, inside a px-6 container: "Deposit & Trade" (primary button with accent background) and "Explore Markets" (secondary button with surface-light background).
+The YoureInScreen SHALL render two full-width buttons with mt-8 and gap-3, inside a px-6 container: "Fund Account & Trade" (primary button with accent background) and "Explore Markets" (secondary button with surface-light background).
 
-#### Scenario: Action buttons are visible
+#### Scenario: Buttons are visible on mount
 - **WHEN** the YoureInScreen renders
-- **THEN** two full-width buttons are displayed: "Deposit & Trade" (accent bg) and "Explore Markets" (surface-light bg)
+- **THEN** two full-width buttons are displayed: "Fund Account & Trade" (accent bg) and "Explore Markets" (surface-light bg)
 
-### Requirement: Deposit & Trade button navigates to deposit screen
-The "Deposit & Trade" button SHALL call `store.navigate('deposit')` when tapped.
+### Requirement: Fund Account & Trade button navigates to deposit screen
+The "Fund Account & Trade" button SHALL call `store.navigate('deposit')` when tapped.
 
-#### Scenario: User taps Deposit & Trade
-- **WHEN** the user taps "Deposit & Trade"
+#### Scenario: User taps Fund Account & Trade
+- **WHEN** the user taps "Fund Account & Trade"
 - **THEN** the app navigates to the 'deposit' screen
 
 ### Requirement: Explore Markets button navigates to home screen

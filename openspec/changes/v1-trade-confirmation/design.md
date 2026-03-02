@@ -19,6 +19,7 @@ The trade-screen change provides the trading interface where users pick directio
 - No take-profit / stop-loss functionality behind the "Set TP/SL" button — placeholder only
 - No haptic feedback or sound effects
 - No share functionality in this change (share-card is a separate change)
+- **Share card trigger**: After the user opens their first position (tracked via store), the trade confirmation bottom sheet SHALL include a "Share Your Win" secondary button that triggers `store.showOverlay('share-card')` after dismissing the trade confirmation. This celebrates the milestone of opening a first position.
 - No animation on the summary card content itself — only the icon and heading animate
 
 ## Decisions

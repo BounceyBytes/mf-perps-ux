@@ -20,6 +20,7 @@ The portfolio-screen change surfaces open positions with a "Close" button on eac
 - Partial close slider does not need to be functional — it is a stretch feature for visual polish only
 - No haptic feedback or sound effects
 - No share functionality in this change
+- **Share card trigger for profitable close**: When the user closes a position with positive P&L, the close-position flow SHALL trigger the share-card overlay (via `store.showOverlay('share-card')`) after the position is closed, allowing the user to celebrate and share their profit.
 - No confirmation dialog before the close action — the bottom sheet itself is the confirmation step
 
 ## Decisions
@@ -30,7 +31,7 @@ The portfolio-screen change surfaces open positions with a "Close" button on eac
 4. **P&L colored green/red based on sign** — Positive P&L renders in green (#00D68F), negative in red (#FF4757). Consistent with PositionCard P&L coloring.
 5. **"Close Full Position" as primary CTA** — Full-width accent button at mt-6. This is the main action. On tap: calls `store.dismissOverlay()`, removes the position from the store's positions array, and triggers a success toast.
 6. **Position removal animates out** — The PositionCard in the portfolio list should animate out (e.g., opacity 0, height 0, or slideRight) when the position is removed from the store. AnimatePresence on the position list handles this automatically if positions are keyed.
-7. **Success toast: "Position closed — $512.80 received"** — Brief, informative. Appears at the bottom of the phone frame, auto-dismisses after ~3 seconds. Simple implementation: a store field `toast` with text and a timeout to clear it.
+7. **Success toast: "Position closed — $512.80 received"** — Brief, informative. Appears at the top of the phone frame (consistent with Toast component spec from transitions-polish), auto-dismisses after 2.5 seconds.
 8. **"Close Partial ▼" is a stretch feature** — Ghost text link (text-sm text-secondary, centered, mt-3). On tap: toggles an AnimatePresence section below it containing a range slider (0–100%) with a percentage label. The slider is visual only — it does not affect the close amount or any store state. The ▼ chevron hints at the expandable behavior.
 9. **"Cancel" as muted ghost link** — text-sm text-muted, centered, mt-3. Least prominent action. Calls `store.dismissOverlay()`.
 10. **Swipe-down to dismiss with 100px threshold** — Same as trade-confirmation: Framer Motion `drag="y"` with `dragConstraints={{ top: 0 }}`, dismiss if `offset.y > 100`.

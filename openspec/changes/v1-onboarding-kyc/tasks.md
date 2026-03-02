@@ -12,7 +12,7 @@
 
 - [ ] 2.1 Add `isLoading` local state (useState) to KycScreen, default false
 - [ ] 2.2 On CTA tap: set `isLoading` to true, show Loader2 spinning icon (animate-spin) in the button, disable the button
-- [ ] 2.3 After 1.5s timeout: call `store.navigate('referral')` — clean up timeout on unmount via useEffect return
+- [ ] 2.3 After 1.5s timeout: call `store.navigate('youre-in')` — clean up timeout on unmount via useEffect return
 
 ## 3. Animations
 
@@ -27,5 +27,5 @@
 
 - [ ] 5.1 Run the app and confirm the KYC screen renders inside PhoneFrame with back arrow, heading, step cards, trust badge, and CTA
 - [ ] 5.2 Tap back arrow and confirm navigation to 'welcome' screen
-- [ ] 5.3 Tap "Start verification" and confirm spinner shows for ~1.5s then navigates to 'referral'
+- [ ] 5.3 Tap "Start verification" and confirm spinner shows for ~1.5s then navigates to 'youre-in'
 - [ ] 5.4 Confirm slide-in animation plays on mount

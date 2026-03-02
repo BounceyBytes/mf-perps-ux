@@ -5,7 +5,7 @@ The V1 prototype has all screens and flows built, but transitions between screen
 ## What Changes
 
 - Update `src/app/page.tsx` to wrap the screen router in Framer Motion AnimatePresence with transition variants per screen category:
-  - Onboarding screens (welcome, kyc, referral, youre-in): slide from right (x:30→0, exit x:-30, 300ms)
+  - Onboarding screens (welcome, kyc, youre-in): slide from right (x:30→0, exit x:-30, 300ms)
   - Tab screens (home, trade, portfolio): crossfade (opacity 0→1, 200ms, no slide)
   - Modal screens (deposit, deposit-amount, withdraw): slide up from bottom (y:50→0, 300ms)
 - Create `src/components/Toast.tsx` — pill-shaped toast notification that slides in from top, auto-dismisses after 2.5s, green left accent for success

@@ -1,6 +1,6 @@
 ## Why
 
-After welcome/sign-up, users need a KYC identity verification screen that communicates trust and regulatory compliance. This screen bridges the gap between initial sign-up and the referral code step. It must feel fast, secure, and straightforward — showing exactly what's needed (ID scan + selfie) and setting the expectation that verification takes ~30 seconds.
+After welcome/sign-up, users need a KYC identity verification screen that communicates trust and regulatory compliance. This screen bridges the gap between initial sign-up and the "You're In" confirmation step. It must feel fast, secure, and straightforward — showing exactly what's needed (ID scan + selfie) and setting the expectation that verification takes ~30 seconds.
 
 ## What Changes
 
@@ -13,7 +13,7 @@ After welcome/sign-up, users need a KYC identity verification screen that commun
   2. Camera icon in accent + "Take a selfie" + "Quick face match" (text-xs text-secondary) + ChevronRight
 - Trust badge (mt-auto, pb-8): Lock icon + "Bank-grade encryption. Your data is never shared." — text-xs text-muted
 - CTA: Primary Button "Start verification", full width, near bottom
-- On tap: button shows Loader2 spinning icon for 1.5s, then navigates to 'referral'
+- On tap: button shows Loader2 spinning icon for 1.5s, then navigates to 'youre-in'
 - Framer Motion: content slides in from right (x: 30→0, opacity 0→1)
 - Wire `KycScreen` into the screen router in `page.tsx` for `screen === 'kyc'`
 - No BottomNav rendered on this screen

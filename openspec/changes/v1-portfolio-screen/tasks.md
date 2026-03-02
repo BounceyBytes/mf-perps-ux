@@ -4,7 +4,7 @@
 - [ ] 1.2 Render top row: "{pair} {direction} {leverage}x" with direction colored green (#00D68F) for Long, red (#FF4757) for Short
 - [ ] 1.3 Render P&L line: "+$12.80 (+2.56%)" in text-lg font-bold, green if positive, red if negative
 - [ ] 1.4 Render value progression: "$500 → $512.80" in text-sm text-secondary
-- [ ] 1.5 Render HealthBar: h-1.5 rounded track with fill width = health%, color green >60%, yellow (#FBBF24) 30-60%, red <30%. Label "{N}% to liq" in matching color
+- [ ] 1.5 Render HealthBar: h-1.5 rounded track with fill width = health%, color green >60%, yellow (#FFD93D) 30-60%, red <30%. Label "{N}% to liq" in matching color
 - [ ] 1.6 Render right-aligned "Close" button (surface-light bg, rounded-lg, text-sm) wired to `store.showOverlay('close-position')`
 - [ ] 1.7 Apply 3px left border: green for Long, red for Short. Use surface bg, rounded-xl, p-4 for the card.
 
@@ -29,7 +29,7 @@
 ## 5. Available Balance & Deposit Link
 
 - [ ] 5.1 Render available balance row: "Available" label with "$48.50" value
-- [ ] 5.2 Add "Deposit" accent link (#7B61FF) wired to `store.navigate('deposit')`
+- [ ] 5.2 Add "Fund Account" accent link (#7B61FF) wired to `store.navigate('deposit')`
 
 ## 6. Yield Teaser Card
 
@@ -59,6 +59,6 @@
 - [ ] 10.1 Run the app and confirm the Portfolio screen renders inside PhoneFrame with header, chart, positions, and BottomNav
 - [ ] 10.2 Confirm PositionCards display correct direction coloring, P&L, health bars, and left borders
 - [ ] 10.3 Tap "Close" on a PositionCard and confirm `showOverlay('close-position')` is called
-- [ ] 10.4 Tap "Deposit" and confirm navigation to 'deposit'
+- [ ] 10.4 Tap "Fund Account" and confirm navigation to 'deposit'
 - [ ] 10.5 Confirm P&L count-up animations fire on mount
 - [ ] 10.6 Confirm time-range pills toggle active state and chart area renders correctly

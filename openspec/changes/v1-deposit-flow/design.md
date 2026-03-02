@@ -1,6 +1,6 @@
 ## Context
 
-The core-components change established the app shell (PhoneFrame, StatusBar, BottomNav, Zustand store, Button, Card). The onboarding flow (welcome → KYC → referral → you're-in) brings users to the point of having an account. The deposit flow is the next step — before users can trade, they need funds. Screen 06 (Deposit Method Selection) and Screen 07 (Deposit Amount Entry) form a two-step funding flow that bridges onboarding to the trading experience. This is a clickable prototype — no real payment processing or blockchain transactions occur.
+The core-components change established the app shell (PhoneFrame, StatusBar, BottomNav, Zustand store, Button, Card). The onboarding flow (welcome → KYC → you're-in) brings users to the point of having an account. The referral screen is deferred to V3 — see [plan-v3-referral-program.md](../../plan-v3-referral-program.md). The deposit flow is the next step — before users can trade, they need funds. Screen 06 (Deposit Method Selection) and Screen 07 (Deposit Amount Entry) form a two-step funding flow that bridges onboarding to the trading experience. This is a clickable prototype — no real payment processing or blockchain transactions occur.
 
 ## Goals / Non-Goals
 
@@ -23,6 +23,8 @@ The core-components change established the app shell (PhoneFrame, StatusBar, Bot
 - No minimum/maximum deposit validation
 - No currency selection (USD only)
 - No deposit history or transaction tracking
+
+**Stablecoin context:** The platform supports three stablecoins: **mantraUSD** (our default stablecoin), **USDC**, and **USDT**. In the V1 prototype, all amounts are displayed in USD. Stablecoin conversion is handled behind the scenes — users deposit in any supported stablecoin and see their balance in USD equivalent. The deposit screen does not expose stablecoin selection in V1; this is a future enhancement.
 
 ## Decisions
 

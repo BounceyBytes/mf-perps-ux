@@ -271,7 +271,7 @@ The gamification system is **woven into the existing UI**, not siloed into its o
 
 **The home screen evolves to include gamification:**
 ```
-Home Screen (with gamification — V2)
+Home Screen (with gamification — this version)
 ┌─────────────────────────┐
 │ ☰  MF Perps     $648.50│
 │                         │
@@ -299,7 +299,7 @@ Home Screen (with gamification — V2)
 
 ---
 
-## V2 Changes to Existing V1 Screens
+## Changes to Existing V1 Screens (this version)
 
 ### Home Screen Additions
 - **Streak + Level row** below header: "🔥 12 day streak" (left), "Lv. 12" with mini XP bar (right)
@@ -381,7 +381,7 @@ State 2: Revealed (after tap)
 
 ---
 
-## V2 Scope
+## Scope (this version)
 
 ### Must Have
 - [ ] XP system + level progression (core loop)
@@ -399,7 +399,7 @@ State 2: Revealed (after tap)
 - [ ] Share card with level/badge display
 - [ ] Social streak comparison
 
-### Future / V3
+### Future
 - [ ] Seasonal competitions / limited-time events
 - [ ] Leaderboard expansion (volume, streaks)
 - [ ] Social feed / copy trading

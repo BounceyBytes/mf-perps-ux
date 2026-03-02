@@ -8,7 +8,7 @@ The KYC screen "Start verification" button SHALL show a Loader2 icon (from lucid
 - **THEN** the button text changes to show a spinning Loader2 icon and the button is disabled until the simulated action completes
 
 #### Scenario: Loading completes and navigates
-- **WHEN** the simulated verification completes (after ~1s)
+- **WHEN** the simulated verification completes (after 1.5s — consistent with KYC screen spec)
 - **THEN** the spinner stops and the app navigates to the next screen
 
 ### Requirement: Deposit amount CTA shows loading spinner during funding

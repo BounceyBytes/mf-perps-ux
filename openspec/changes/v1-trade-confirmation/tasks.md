@@ -48,3 +48,4 @@
 - [ ] 8.5 Tap "Set TP/SL" and confirm nothing happens
 - [ ] 8.6 Tap backdrop and confirm overlay dismisses
 - [ ] 8.7 Swipe sheet down > 100px and confirm it dismisses; swipe < 100px and confirm it snaps back
+- [ ] 8.8 Verify that on the user's first position, a "Share Your Win 🎉" button appears and triggers the share-card overlay

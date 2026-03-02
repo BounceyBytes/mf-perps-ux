@@ -74,11 +74,11 @@ A primary button labeled "Close Full Position" SHALL render full width with mt-6
 - **THEN** the corresponding PositionCard in the portfolio list animates out (exit animation via AnimatePresence)
 
 ### Requirement: Success toast displays after position close
-A toast notification SHALL appear at the bottom of the phone frame displaying "Position closed — ${amount} received" after a position is closed. The toast SHALL auto-dismiss after approximately 3 seconds.
+A toast notification SHALL appear at the top of the phone frame displaying "Position closed — ${amount} received" after a position is closed. The toast SHALL auto-dismiss after 2.5 seconds (consistent with the toast notification spec in transitions-polish).
 
 #### Scenario: Toast appears and auto-dismisses
 - **WHEN** the user confirms closing a position with currentValue=512.80
-- **THEN** a toast reading "Position closed — $512.80 received" appears at the bottom of the phone frame and disappears after ~3 seconds
+- **THEN** a toast reading "Position closed — $512.80 received" appears at the top of the phone frame and disappears after 2.5 seconds
 
 ### Requirement: "Close Partial ▼" expands a slider (stretch feature)
 A ghost text link labeled "Close Partial ▼" SHALL render centered below the primary button (mt-3, text-sm, text-secondary). Tapping it SHALL toggle an AnimatePresence section containing a range slider (0–100%) with a percentage label. The slider is visual only and does not affect the close amount or store state.
@@ -122,4 +122,15 @@ The Zustand store SHALL expose a `closingPosition` field (set when a PositionCar
 
 #### Scenario: showToast sets and auto-clears toast
 - **WHEN** `showToast('Position closed — $512.80 received')` is called
-- **THEN** `store.toast` is `'Position closed — $512.80 received'` and after ~3 seconds `store.toast` becomes `null`
+- **THEN** `store.toast` is `'Position closed — $512.80 received'` and after 2.5 seconds `store.toast` becomes `null`
+
+### Requirement: Share card trigger on profitable close
+When the user closes a position with positive P&L, the close flow SHALL trigger the share-card overlay after the position is removed. Specifically, after calling `store.dismissOverlay()` and `store.showToast(...)`, a setTimeout of ~500ms SHALL call `store.showOverlay('share-card')` to let the user celebrate and share their profit.
+
+#### Scenario: Profitable close triggers share card
+- **WHEN** the user taps "Close Full Position" on a position with positive P&L (pnl > 0)
+- **THEN** the overlay dismisses, a toast appears, and after ~500ms the share-card overlay is shown
+
+#### Scenario: Loss close does not trigger share card
+- **WHEN** the user taps "Close Full Position" on a position with negative P&L (pnl < 0)
+- **THEN** the overlay dismisses and a toast appears, but the share-card overlay is NOT shown

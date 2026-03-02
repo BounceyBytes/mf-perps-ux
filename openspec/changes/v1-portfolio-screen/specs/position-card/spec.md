@@ -30,7 +30,7 @@ The PositionCard SHALL display the position value progression in text-sm text-se
 - **THEN** "$500 → $512.80" appears in text-sm text-secondary
 
 ### Requirement: PositionCard displays health bar with liquidation distance
-The PositionCard SHALL render a HealthBar with a track (h-1.5, rounded), a fill whose width equals the health percentage, and a label showing "{N}% to liq". The fill and label color SHALL be green (#00D68F) when health > 60%, yellow (#FBBF24) when 30-60%, and red (#FF4757) when < 30%.
+The PositionCard SHALL render a HealthBar with a track (h-1.5, rounded), a fill whose width equals the health percentage, and a label showing "{N}% to liq". The fill and label color SHALL be green (#00D68F) when health > 60%, yellow (#FFD93D — see design tokens) when 30-60%, and red (#FF4757) when < 30%.
 
 #### Scenario: Healthy position (above 60%)
 - **WHEN** a position has health=75
@@ -38,7 +38,7 @@ The PositionCard SHALL render a HealthBar with a track (h-1.5, rounded), a fill 
 
 #### Scenario: Caution position (30-60%)
 - **WHEN** a position has health=45
-- **THEN** the health bar fill is 45% wide in yellow and label reads "45% to liq" in yellow
+- **THEN** the health bar fill is 45% wide in yellow (#FFD93D) and label reads "45% to liq" in yellow
 
 #### Scenario: Danger position (below 30%)
 - **WHEN** a position has health=20

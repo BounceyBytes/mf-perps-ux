@@ -54,15 +54,15 @@ The PortfolioScreen SHALL render PositionCard components for each open position,
 - **WHEN** mock data contains 2 open positions
 - **THEN** 2 PositionCard components render stacked with gap-3
 
-### Requirement: Available balance displays with deposit link
-The PortfolioScreen SHALL display the available balance "$48.50" with a "Deposit" link in accent color (#7B61FF). Tapping "Deposit" SHALL call `store.navigate('deposit')`.
+### Requirement: Available balance displays with Fund Account link
+The PortfolioScreen SHALL display the available balance "$48.50" with a "Fund Account" link in accent color (#7B61FF). Tapping "Fund Account" SHALL call `store.navigate('deposit')`.
 
 #### Scenario: Available balance renders
 - **WHEN** the PortfolioScreen renders
-- **THEN** "Available" label and "$48.50" value are displayed with a "Deposit" accent link
+- **THEN** "Available" label and "$48.50" value are displayed with a "Fund Account" accent link
 
-#### Scenario: User taps Deposit link
-- **WHEN** the user taps "Deposit"
+#### Scenario: User taps Fund Account link
+- **WHEN** the user taps "Fund Account"
 - **THEN** the app navigates to the 'deposit' screen
 
 ### Requirement: Yield teaser card renders with gradient border

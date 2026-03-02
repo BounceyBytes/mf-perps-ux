@@ -8,15 +8,15 @@ The screen router in `page.tsx` SHALL be wrapped in a Framer Motion AnimatePrese
 - **THEN** the current screen animates out fully before the new screen animates in
 
 ### Requirement: Onboarding screens use slide-from-right transition
-The screens 'welcome', 'kyc', 'referral', and 'youre-in' SHALL use a slide-from-right transition: initial `{ x: 30, opacity: 0 }`, animate `{ x: 0, opacity: 1 }`, exit `{ x: -30, opacity: 0 }`, with a duration of 300ms.
+The screens 'welcome', 'kyc', and 'youre-in' SHALL use a slide-from-right transition: initial `{ x: 30, opacity: 0 }`, animate `{ x: 0, opacity: 1 }`, exit `{ x: -30, opacity: 0 }`, with a duration of 300ms. The 'referral' screen is deferred to V3 — see [plan-v3-referral-program.md](../../../../plan-v3-referral-program.md).
 
 #### Scenario: Welcome to KYC transition
 - **WHEN** the user navigates from 'welcome' to 'kyc'
 - **THEN** the welcome screen slides out to the left (x: -30, opacity: 0) and the KYC screen slides in from the right (x: 30→0, opacity: 0→1) over 300ms
 
-#### Scenario: Referral to youre-in transition
-- **WHEN** the user navigates from 'referral' to 'youre-in'
-- **THEN** the referral screen exits left and the youre-in screen enters from the right over 300ms
+#### Scenario: KYC to youre-in transition
+- **WHEN** the user navigates from 'kyc' to 'youre-in'
+- **THEN** the KYC screen exits left and the youre-in screen enters from the right over 300ms
 
 ### Requirement: Tab screens use crossfade transition
 The screens 'home', 'trade', and 'portfolio' SHALL use a crossfade transition: initial `{ opacity: 0 }`, animate `{ opacity: 1 }`, exit `{ opacity: 0 }`, with a duration of 200ms. No horizontal or vertical slide.

@@ -1,7 +1,7 @@
 ## ADDED Requirements
 
 ### Requirement: Header displays back arrow, pair name, and current price
-The TradeScreen SHALL render a header row with a back arrow (ChevronLeft or ArrowLeft icon) on the left, the selected pair name (e.g., "BTC / USD") in text-lg font-semibold centered, and the current price (e.g., "$67,156") in text-sm tabular-nums on the right.
+The TradeScreen SHALL render a header row with a back arrow (ArrowLeft icon) on the left, the selected pair name (e.g., "BTC / USD") in text-lg font-semibold centered, and the current price (e.g., "$67,156") in text-sm tabular-nums on the right. Back arrow convention: onboarding screens use ChevronLeft; utility/modal screens (trade, deposit, withdraw) use ArrowLeft.
 
 #### Scenario: Header renders with selected pair
 - **WHEN** the TradeScreen renders with store.selectedPair = 'BTC/USD'

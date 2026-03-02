@@ -39,8 +39,8 @@ The KycScreen SHALL render a primary Button with text "Start verification" at fu
 - **WHEN** the KycScreen renders
 - **THEN** a full-width primary button with text "Start verification" is visible near the bottom
 
-### Requirement: CTA shows loading spinner then navigates to referral
-When the user taps the "Start verification" button, the button SHALL display a Loader2 spinning icon for 1.5 seconds. After the 1.5s delay, the app SHALL navigate to the 'referral' screen via `store.navigate('referral')`. The button SHALL be disabled while loading.
+### Requirement: CTA shows loading spinner then navigates to youre-in
+When the user taps the "Start verification" button, the button SHALL display a Loader2 spinning icon for 1.5 seconds. After the 1.5s delay, the app SHALL navigate to the 'youre-in' screen via `store.navigate('youre-in')`. The button SHALL be disabled while loading.
 
 #### Scenario: User taps Start verification
 - **WHEN** the user taps "Start verification"
@@ -48,7 +48,7 @@ When the user taps the "Start verification" button, the button SHALL display a L
 
 #### Scenario: Loading completes after 1.5 seconds
 - **WHEN** 1.5 seconds have elapsed since the user tapped "Start verification"
-- **THEN** the app navigates to the 'referral' screen
+- **THEN** the app navigates to the 'youre-in' screen
 
 ### Requirement: Entrance animation slides in from the right
 The KycScreen content SHALL animate in from the right on mount — x: 30 → 0 with opacity: 0 → 1 — using Framer Motion.

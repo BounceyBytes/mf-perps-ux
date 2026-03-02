@@ -21,6 +21,8 @@ After onboarding, users need to fund their account before they can trade. The de
 - Create `NumPad` component (`src/components/NumPad.tsx`) — reusable 4×3 numeric keypad with digit, decimal, and backspace buttons
 - Wire both screens into the screen router in `page.tsx` for `screen === 'deposit'` and `screen === 'deposit-amount'`
 
+**Stablecoin note:** The platform supports mantraUSD (default), USDC, and USDT. In V1, all amounts display in USD and stablecoin conversion is handled behind the scenes. Stablecoin selection is deferred to a future version.
+
 ## Capabilities
 
 ### New Capabilities

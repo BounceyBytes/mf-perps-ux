@@ -30,3 +30,4 @@ When a user taps "Close" on a PositionCard in the Portfolio screen, there is no 
 - Depends on: PhoneFrame, Button, Zustand store (from core-components change)
 - Depends on: PositionCard triggering `showOverlay('close-position')` (from portfolio-screen change)
 - On close confirmation: removes position from `openPositions` in store (or mock data), animates the PositionCard out of the portfolio list, and shows a toast notification
+- **Share card trigger**: When the closed position has positive P&L (profit), the close flow triggers the share-card overlay after dismissal so the user can celebrate and share their win

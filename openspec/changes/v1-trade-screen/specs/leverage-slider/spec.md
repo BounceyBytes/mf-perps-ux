@@ -12,7 +12,7 @@ The LeverageSlider component SHALL accept `value` and `onChange` props and rende
 - **THEN** `onChange` is called with 50, the thumb moves to the 50 position, and the label updates to "50x"
 
 ### Requirement: Track fill color indicates risk level
-The LeverageSlider track fill SHALL be color-coded based on the current value: green (#00D68F) for 2-25x, yellow (#F7B731) for 25-50x, red (#FF4757) for 50-100x. The unfilled portion of the track SHALL use surface-light (#1E1E2E) background.
+The LeverageSlider track fill SHALL be color-coded based on the current value: green (#00D68F) for 2-25x, yellow (#FFD93D — see design tokens) for 25-50x, red (#FF4757) for 50-100x. The unfilled portion of the track SHALL use surface-light (#1E1E2E) background.
 
 #### Scenario: Leverage at 10x shows green fill
 - **WHEN** LeverageSlider renders with value=10
@@ -20,7 +20,7 @@ The LeverageSlider track fill SHALL be color-coded based on the current value: g
 
 #### Scenario: Leverage at 35x shows yellow fill
 - **WHEN** LeverageSlider renders with value=35
-- **THEN** the filled portion of the track is yellow (#F7B731)
+- **THEN** the filled portion of the track is yellow (#FFD93D)
 
 #### Scenario: Leverage at 75x shows red fill
 - **WHEN** LeverageSlider renders with value=75
@@ -46,7 +46,7 @@ The LeverageSlider SHALL display a warning message below the slider when the val
 
 #### Scenario: Yellow warning at 30x
 - **WHEN** LeverageSlider renders with value=30
-- **THEN** "High leverage increases liquidation risk" appears below the slider in yellow (#F7B731) text-xs
+- **THEN** "High leverage increases liquidation risk" appears below the slider in yellow (#FFD93D) text-xs
 
 #### Scenario: Red warning at 75x
 - **WHEN** LeverageSlider renders with value=75

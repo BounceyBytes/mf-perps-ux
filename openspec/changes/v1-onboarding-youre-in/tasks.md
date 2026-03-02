@@ -3,8 +3,8 @@
 - [ ] 1.1 Create `src/components/screens/YoureInScreen.tsx` with a centered flex layout (min-h-full, flex, flex-col, items-center, justify-center, px-6)
 - [ ] 1.2 Add CheckCircle2 icon from Lucide at size 64px in accent color (#7B61FF), centered
 - [ ] 1.3 Add "You're all set" heading — text-2xl font-bold mt-4, centered
-- [ ] 1.4 Add two full-width action buttons (mt-8, gap-3, w-full): "Deposit & Trade" (primary/accent bg) and "Explore Markets" (secondary/surface-light bg)
-- [ ] 1.5 Wire "Deposit & Trade" button to call `useStore.getState().navigate('deposit')` on click
+- [ ] 1.4 Add two full-width action buttons (mt-8, gap-3, w-full): "Fund Account & Trade" (primary/accent bg) and "Explore Markets" (secondary/surface-light bg)
+- [ ] 1.5 Wire "Fund Account & Trade" button to call `useStore.getState().navigate('deposit')` on click
 - [ ] 1.6 Wire "Explore Markets" button to call `useStore.getState().navigate('home')` on click
 
 ## 2. Animations
@@ -21,6 +21,6 @@
 ## 4. Verification
 
 - [ ] 4.1 Run the app and confirm the You're In screen renders inside PhoneFrame with check icon, heading, and two buttons centered
-- [ ] 4.2 Tap "Deposit & Trade" and confirm navigation to 'deposit' screen
+- [ ] 4.2 Tap "Fund Account & Trade" and confirm navigation to 'deposit' screen
 - [ ] 4.3 Tap "Explore Markets" and confirm navigation to 'home' screen
 - [ ] 4.4 Confirm check icon spring animation and staggered button animations play on mount

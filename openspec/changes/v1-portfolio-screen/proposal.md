@@ -9,7 +9,7 @@ After users open positions from the Trade screen, they need a central place to m
   - Portfolio value area chart (~140px tall) with green fill when P&L positive, red when negative, dashed break-even line, and time-range pills (1D, 1W, 1M default, 3M, ALL). Touch scrub updates header values.
   - "Open Positions (2)" section header (text-xs uppercase tracking-wider text-muted)
   - PositionCard components (stacked, gap-3) showing pair/direction/leverage, P&L, value progression, health bar with liquidation distance, close button, and 3px colored left border
-  - Available balance "$48.50" with "Deposit" accent link navigating to 'deposit'
+  - Available balance "$48.50" with "Fund Account" accent link navigating to 'deposit'
   - Yield teaser card with gradient border (accent→green), target APY, TrendingUp icon, "Learn More →" accent link, and disclaimer caption
   - "History" section with two closed position rows showing pair, result, P&L color, and relative timestamp
 - Create `PositionCard` component (`src/components/PositionCard.tsx`) — reusable card for open positions with direction coloring, P&L display, health bar, and close action
